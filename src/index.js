@@ -58,5 +58,5 @@ backAgain.addEventListener('click', () => {
    container3.style.display = "none";
 })
 
-
 console.log(validator);
+
