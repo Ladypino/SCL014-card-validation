@@ -1,185 +1,189 @@
-body{background:  url(/img/img4.jpg.jpeg);
+/* Girl power */
+body{
+  /* overflow-y: hidden; */
+  background:  url(/img/img4.jpg.jpeg);
   background-color: black;
 } 
 
-/* Girl power */
 .logo{
-     width: 100% ;
-     height: auto ;
-     text-align: center ;
-     margin-top: 50px ; 
-     background-repeat:  no-repeat ;
-     opacity: 0,2 ; 
-  }
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 50px; 
+  background-repeat:  no-repeat;
+  opacity: 0,2; 
+  border-radius: 10px;
+}
 
- header {
-     color:  rgb(5, 54, 17) ;
-     font-size: 30px ;
-     font-family: 'cursive' ;
-     text-align: center ;   
-    }
+header {
+  margin-top: 0em;
+  color:  rgb(5, 54, 17);
+  font-size: 30px;
+  font-family: 'cursive';
+  text-align: center;   
+  border-radius: 10px;
+}
 
- p{
-     color: rgb(243, 247, 243);
-     font-size: 30px;
-     font-family: 'cursive';
-     margin-top: 0em;
-     text-align: center;
-  } 
+p{
+  color: rgb(243, 247, 243);
+  font-size: 30px;
+  font-family: 'cursive';
+  margin-top: 0em;
+  text-align: center;
+}
 
-  footer {
-     color: rgb(243, 243, 234);
-     font-size: 20px;
-     font-family: 'cursive';
-     margin-top: 3em;
-     text-align: center;
-  }
+footer{
+  color: rgb(243, 243, 234);
+  font-size: 20px;
+  font-family: 'cursive';
+  padding-top: 0em;
+  text-align: center;
+}
 
-  h1 {
-     color: rgb(195, 212, 43);
-     font-size: 25px;
-     font-family: 'cursive';
-     margin-top: 3%;
-     text-align: center;
-    }
+h1{
+  color: rgb(195, 212, 43);
+  font-size: 25px;
+  font-family: 'cursive';
+  margin-top: 3%;
+  text-align: center;
+}
 
- h2 {
-     color: rgb(195, 212, 43);
-     font-size: 28px;
-     font-family: 'cursive';
-     margin-top: 3%;
-     text-align: center;
-    }
- h3 {
-     color: rgb(195, 212, 43);
-     font-size: 35px;
-     font-family: 'cursive';
-     margin-top: 3%;
-     text-align: center;
-    }
+h2 {
+  color: rgb(195, 212, 43);
+  font-size: 28px;
+  font-family: 'cursive';
+  margin-top: 1%;
+  text-align: center;
+}
 
- h4 {
-     color: rgb(246, 247, 241);
-     font-size: 28px;
-     font-family: 'cursive';
-     margin-top: 3%;
-     text-align: center;
-    }
+h3{
+  color: rgb(195, 212, 43);
+  font-size: 35px;
+  font-family: 'cursive';
+  margin-top: 1%;
+  text-align: center;
+}
+
+h4{
+  color: rgb(246, 247, 241);
+  line-height: 0em;
+  font-size: 28px;
+  font-family: 'cursive';
+  margin-top: 1%;
+  text-align: center;
+}
+
 
 /* Bloque amarillo */
-#container {
-  width:  70% ;
-  background: rgb(018,018,018);;
-  margin-left: 10% ;
+#container{
+ 
+  width: 70%;
+  background: rgb(018,018,018);
+  margin-left: 10%;
   margin-top: 1%;
-  padding-left: 5%;
-  padding-top: 2%;
-  padding-right: 5%;
-  padding-bottom: 2%;
-  border-radius: 10px ;
+  padding: 2% 5% ;
+  border-radius: 10px;
   opacity: 0.7; 
-   font-family: 'cursive';
+  font-family: 'cursive';
 }
+
 /* contener segunda pantalla */
-#container2{
-   justify-content: center;
-   flex-direction: column;
-   width:  70% ;
-   background: rgb(19, 19, 18);
-   margin-left: 10% ;
-   margin-top: 8%;
-   padding-left: 5%;
-   padding-top: 2%;
-   padding-right: 5%;
-   padding-bottom: 2%;
-   display: none; 
-   opacity: 0.7;
+#container2{  
+  display: none;
+  width: 70%;
+  background: rgb(19, 19, 18);
+  margin-left: 10%;
+  margin-top: 8%;
+  padding: 2% 5%;
+  border-radius: 10px;
+  opacity: 0.7;
 }
+
 /* contenedor tercera pantalla */
 #container3{
+  display: none;
   justify-content: center;
   flex-direction: column;
-  width:  70% ;
-  background: #C2BE18;
-  margin-left: 10% ;
-  margin-top: 8%;
-  padding-left: 5%;
-  padding-top: 2%;
-  padding-right: 5%;
-  padding-bottom: 2%;
-  display: none; 
+  width:  70%;
   background-color:rgb(018,018,018);
+  margin-left: 10%;
+  margin-top: 8%;
+  padding: 2% 5%;
+  border-radius: 10px;
   opacity: 0.8; 
-  }
-/* Letras dentro del contenedor */
-label {
-  display: block;
-  font-size: 23px;
-  font-family: 'cursive';
-  width: 100%;
-   color:rgb(195, 212, 43);
 }
-/* input del seleccionador */
-select { 
-  margin-top: 10px;
-  font-size: 23px;
-}
-/* animacion del cursos para los input */
-select:hover,input[type="button"]:hover, input[type="date"] {
-  cursor: pointer;
-}
-/*solo afecta al calendario  */
-input, textarea{
-  margin-bottom: 12px;
-  width: 20%;
-  color: rgb(255, 255, 255);
-  box-sizing: border-box;
-  border : 1px solid;
-  font-size : 23px;  
-}
-/* estilo para el boton de siguiente */
-input[type="button"] {
-  background-color: rgb(195, 212, 43);;
-  color: rgb(0, 0, 0);
+
+/* estilo para el boton
+ de siguiente */
+ input[type="button"]{
+  margin-left: 40%;
+  background-color: rgb(195, 212, 43);
+  color: black;
   border: 1px solid , rgb(2, 2, 2);
-  align-items: center;
   font-size: 23px;
   border-radius: 3px ;
   font-family: 'cursive';
 }
+
+/* Letras dentro del contenedor */
+label{ 
+  display: block;
+  font-size: 23px;
+  font-family: 'cursive';
+  width: 100%;
+  color:rgb(195, 212, 43);
+}
+
+/* input del seleccionador */
+select{ 
+  margin-top: 10px;
+  font-size: 23px;
+}
+
+/*solo afecta al calendario y el password*/
+input, textarea{
+  margin-bottom: 12px;
+  width: 20%;
+  color: black;
+  box-sizing: border-box;
+  border : 1px solid, rgb(2, 2, 2);
+  font-size : 23px;  
+}
+
+button[type="button"]{
+  color: black;
+  border: 1px solid , rgb(2, 2, 2);
+  font-size: 18px;
+  border-radius: 3px ;
+  margin-left: 1em;
+  padding: 0em 1em;
+  
+}
+
+input[type="password"]{
+  padding: 0em 1em;
+  display: inline-block;
+  margin-left: 30%;
+}
+
+
 /* animacion para el boton de siguiente */
-input[type="button"]:hover {
+input[type="button"]:hover{
   background: #4A88F4;
 }
 
+button[type="button"]:hover{
+ background: grey ;
+}
+
 /* OJO: las opciones desplazables están como select(no es input), en cambio la opción de fecha está como date y es un input */
-.final {
+.final{
   background-color:rgb(018,018,018);
-   opacity: 0.8;
-}
-.ultimo {
-    background-color:rgb(018,018,018);
-   opacity: 0.8; 
-
+  opacity: 0.8;
+  border-radius: 10px;
 }
 
-.eye {
-  margin: 100px;
-  width: 13px;
-  height: 13px;
-  border: solid 1px #1a25ab;
-  border-radius:  75% 15%;
-  position: relative;
-  transform: rotate(45deg);
-}
-.eye:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border: solid 1px #1a25ab;
-  border-radius: 50%;
-  left: 3px;
-  top: 3px;
+/* animacion del cursos para los input */
+select:hover,input[type="button"]:hover, input[type="date"]:hover, button[type="button"]:hover{
+  cursor: pointer;
 }
