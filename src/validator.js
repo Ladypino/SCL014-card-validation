@@ -1,7 +1,8 @@
 const validator = {
 
     isValid:(inputNum) => { 
-      var NumeroTarj_ =document.getElementById('NumeroTarj').value; 
+
+      var NumeroTarj_ = document.getElementById('NumeroTarj'); 
       NumeroTarj_ = parseInt(NumeroTarj_);
       if (NumeroTarj_ == " ") { 
         alert("Este Campo no Debe Estar Vacio"); 
@@ -58,14 +59,5 @@ const validator = {
     },
         
     };
-    var showCardBtn= document.getElementById('mostrarTarjeta');
-    showCardBtn.addEventListener('click', () => {
-      var tipo = document.getElementById("NumeroTarj");
-      if(tipo.type == "password"){
-          tipo.type = "text";
-      }else{
-          tipo.type = "password";
-      }
-  })
-  
+ 
   export default validator;

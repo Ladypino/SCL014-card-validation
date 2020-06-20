@@ -183,4 +183,8 @@ select:hover,input[type="button"]:hover, input[type="date"]:hover, button[type="
 }
 
 
- 
+.final{
+  background-color:rgb(018,018,018);
+  opacity: 0.8;
+  border-radius: 10px;
+}
