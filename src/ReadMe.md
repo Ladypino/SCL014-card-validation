@@ -1,6 +1,6 @@
-#NUESTRO PROYECTO
+# NUESTRO PROYECTO
 
-#-- LA CASA DEL LOBO -- 
+# -- LA CASA DEL LOBO -- 
 #    Hotel & Resort
 
 Comenzamos nuestro proyecto con un brainstorming entre ambas,logrando así llegar a muchas posibles opciones para el proyecto pasando desde una empresa de seguridad a una empresa que vendía cursos de capacitación para así llegar a un Hotel llamado --La casa del lobo--. Nos quedamos con la última idea ya que ambas hemos tenido muchas experiencias de viajes -tantas buenas como malas- en concreto nos acordabamos del tedioso check-in,el tener que esperar filas para solo preguntar si había una habitación disponible, llamar a un número que no existía o que no contestaba, es debido a esto que llegamos a la conclusión que hacer un validador para las reservas de hotel sería un método más ágil para el usuario. 
@@ -10,7 +10,7 @@ Nuestro público objetivo son turistas de todo el mundo, mayores de edad que pos
 
 La solución que damos a nuestros clientes es asegurar su reserva en un 100%, independientemente de donde se encuentre, solo mediante la validación de su tarjeta de crédito en nuestra página web, sin llamados innecesarios, sin largas esperdas para hacer un check-in o preguntar si hay disponibilidad del local, por lo que solo con la validación de su tarjeta podrá seleccionarse que la suit, el horario y día deseado.
 
-#UX (Diseño de experiencia de usuario)
+# UX (Diseño de experiencia de usuario)
 
 Trabajamos nuestra primera idea en papel y lapiz siendo solo en blanco y negro, luego hicimos el sketch con colores. El pedir feedback a nuestras pares nos ayudó bastante para lograr enfocarnos mejor en nuestro proyecto y lograr decidirnos por hacer la opción del Hotel.
 
