@@ -47,14 +47,33 @@ diseño de prototipos (Balsamiq, Figma, Google Slides, etc.) Estos puntos los pr
 
 IMAGEN DEL PRIMER PROTOTIPADO EN PAPEL
 
+IMAGENES DE PAULA PAPEL Y LAPIZ
+
 
 
 feedback
 1 feeback recibido fue bastante bueno ya que no teniamos una idea clara en que enfocarnos teniamos varias
 opciones en mente pero no habiamos decidido alguno y nuestras compañeras nos sirvieron de guia para enfocarnos
-en un solo proyecto que seria mas util y que no
+en un solo proyecto que seria mas util y que no en varios otro que en realidad no tenian una finalidad logica
 
-IMAGEN DEL PROTOTIPO FINAL333
+
+2 IMAGENES IN VISION GOOGLE SLICE
+
+
+2 Y 3 Feedback 
+en esta instancia recibimos comentarios acerca de colores pocisiones y algunos argumentos que cambiamos de lugar.
+
+
+
+IMAGENES DEL TESTEO EN USUARIOS
+ en nuestro 4 y 5 feedback lo quisimos hacer ya un  testeo directo con posibles usuarios de forma presencial y en distintas plataformas 
+ tales como celular y notebook recibimos un feedback con amplia aceptacion ya que  4 de 5 usuarios encontraron nuestra plataforma facil de usar amigable con el cliente y amena en su variedad de colores y pocisionamiento de botones e imagenes aun asi uno de nuestros usuarios nos indico que los colores no eran de su total agrado, pero que la usabilidad era perfecta para el facil y comoda fueron palabras repetidas por lo tanto el prototipo final quedo asi:
+ 
+ PRINT DE PANTALLAS 1 ,2,3
+ 
+ 
+
+
 
 
 
