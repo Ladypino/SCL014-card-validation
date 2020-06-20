@@ -176,14 +176,11 @@ button[type="button"]:hover{
  background: grey ;
 }
 
-/* OJO: las opciones desplazables están como select(no es input), en cambio la opción de fecha está como date y es un input */
-.final{
-  background-color:rgb(018,018,018);
-  opacity: 0.8;
-  border-radius: 10px;
-}
 
 /* animacion del cursos para los input */
 select:hover,input[type="button"]:hover, input[type="date"]:hover, button[type="button"]:hover{
   cursor: pointer;
 }
+
+
+ 
