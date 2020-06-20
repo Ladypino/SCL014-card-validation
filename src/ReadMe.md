@@ -1,7 +1,6 @@
 # NUESTRO PROYECTO
-
-# -- LA CASA DEL LOBO -- 
-#    Hotel & Resort
+ **-- LA CASA DEL LOBO --**  
+     **Hotel & Resort**
 
 Comenzamos nuestro proyecto con un brainstorming entre ambas,logrando así llegar a muchas posibles opciones para el proyecto pasando desde una empresa de seguridad a una empresa que vendía cursos de capacitación para así llegar a un Hotel llamado --La casa del lobo--. Nos quedamos con la última idea ya que ambas hemos tenido muchas experiencias de viajes -tantas buenas como malas- en concreto nos acordabamos del tedioso check-in,el tener que esperar filas para solo preguntar si había una habitación disponible, llamar a un número que no existía o que no contestaba, es debido a esto que llegamos a la conclusión que hacer un validador para las reservas de hotel sería un método más ágil para el usuario. 
 Nuestro Hotel se encuentra ubicado en el sur de Chile, donde la naturaleza te envuelve y puedes escuchar como cae el agua de las cascadas, para así brindar una experiencia de ensueño y mágica, es por esto que tanto como la fotografía escogida como la paleta de colores del sitio web siguen una linea entre algo refinado pero sin desapegarse de la estetica forestal.
