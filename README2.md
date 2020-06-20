@@ -54,7 +54,7 @@ feedback
 opciones en mente pero no habiamos decidido alguno y nuestras compañeras nos sirvieron de guia para enfocarnos
 en un solo proyecto que seria mas util y que no
 
-IMAGEN DEL PROTOTIPO FINAL
+IMAGEN DEL PROTOTIPO FINAL333
 
 
 
