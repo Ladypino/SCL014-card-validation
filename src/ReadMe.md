@@ -56,4 +56,5 @@ Para finalizar todo el proceso del diseño y experiencia del usuario, recurrimos
 
 
 PROYECTO FINAL
-https://ladypino.github.io/SCL014-card-validation/src/index.html
+
+https://ladypino.github.io/SCL014-card-validation/
