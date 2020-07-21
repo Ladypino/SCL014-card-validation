@@ -76,7 +76,6 @@ h4{
 
 /* Bloque amarillo */
 #container{
- 
   width: 70%;
   background: rgb(018,018,018);
   margin-left: 10%;
@@ -140,6 +139,7 @@ select{
   font-size: 23px;
 }
 
+
 /*solo afecta al calendario y el password*/
 input, textarea{
   margin-bottom: 12px;
@@ -157,7 +157,6 @@ button[type="button"]{
   border-radius: 3px ;
   margin-left: 1em;
   padding: 0em 1em;
-  
 }
 
 input[type="password"]{
@@ -165,6 +164,7 @@ input[type="password"]{
   display: inline-block;
   margin-left: 30%;
 }
+
 
 
 /* animacion para el boton de siguiente */
@@ -177,14 +177,17 @@ button[type="button"]:hover{
 }
 
 
+/* OJO: las opciones desplazables están como select(no es input), en cambio la opción de fecha está como date y es un input */
+.final{
+  background-color:rgb(018,018,018);
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+
 /* animacion del cursos para los input */
 select:hover,input[type="button"]:hover, input[type="date"]:hover, button[type="button"]:hover{
   cursor: pointer;
 }
 
 
-.final{
-  background-color:rgb(018,018,018);
-  opacity: 0.8;
-  border-radius: 10px;
-}

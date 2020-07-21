@@ -1,5 +1,6 @@
 const validator = {
 
+
     isValid:(inputNum) => { 
 
       var NumeroTarj_ = document.getElementById('NumeroTarj'); 
