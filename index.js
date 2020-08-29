@@ -1,80 +1,155 @@
-import validator from "./validator.js";
-// funcion que lleva a la segunda pantalla
-const btn = document.getElementById("btn");
-btn.addEventListener("click", () => {
-  let container = document.getElementById("container");
-  let container2 = document.getElementById("container2");
-  let container3 = document.getElementById("container3");
-  container.style.display = "none";
-  container2.style.display = "block";
-  container3.style.display = "none";
+//Obtener id del modal
+const modal = buscadorDeId('modal');
+// obtener elemento de cerrar modal <span>
+const closeModal = buscadorDeId('close');
+// cerrar modal
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
 });
 
-let showCardBtn = document.getElementById("mostrarTarjeta");
-  showCardBtn.addEventListener("click", () => {
-    var tipo = document.getElementById("NumeroTarj");
-    if (tipo.type == "password") {
-      tipo.type = "text";
-    } else {
-      tipo.type = "password";
-    }
-});
+// Creando plantilla para el modal
+const crearPlantillaModal = (name, num, image, about, type, resistant, weaknesses) => `
+        <section>
+        <section>
+          <h2>${name}<br>#${num}</h2>
+        </section>
+        <section>
+          <img src="${image}" alt="${name}">
+        </section>
+        <section class="div-about">
+          <p>${about}</p>
+        </section>
+        <section>
+          <section class="type">
+            <p><strong>Tipo:</strong> ${type}</p>
+          </section>
+          <section>
+            <p id ="resistencia"><strong>Resistencia:</strong> ${resistant}</p> 
+            <p><strong>Debilidades:</strong> ${weaknesses}</p>
+          </section>
+        </section>
+    `;
 
-const validatorBtn = document.getElementById("myFunction");
-validatorBtn.addEventListener("click", () => {
-  var NumeroTarj_ = document.getElementById("NumeroTarj").value;
-  // convierto el numero que digitaron en Entero ya que lo recupera como String "cadena de texto"
-  NumeroTarj_ = parseInt(NumeroTarj_);
-  // valida si el campo esta vacio
-  if (NumeroTarj_ == " ") {
-    // console.log("Este Campo no Debe Estar Vacio");
-    alert("Este Campo no Debe Estar Vacio");
-    return;
-  }
+const containerModal = buscadorDeId('pokemon-container-modal');
+const imprimirEnModal = (div) => {
+  containerModal.innerHTML = '';
+  containerModal.insertAdjacentHTML('beforeend', div);
+};
 
-
-  const myFalseOrTrue = new Boolean(validator.isValid(NumeroTarj_));
-  if (myFalseOrTrue == true) {
-    let numero_tarjeta_codificado = validator.maskify(NumeroTarj_.toString());
-    alert("Su Tarjeta es Valida " + numero_tarjeta_codificado);
-
-    // funcion que lleva a la tercera pantalla
-    let backBtn = document.getElementById("back-btn");
-    backBtn.addEventListener("click", () => {
-      let container = document.getElementById("container");
-      let container2 = document.getElementById("container2");
-      let container3 = document.getElementById("container3");
-      container.style.display = "none";
-      container2.style.display = "none";
-      container3.style.display = "block";
+// Boton que abre el Modal / Contenido del modal
+const asignarEvento = () => {
+  document.querySelectorAll('[data-pokemon]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.dataset.pokemon;
+      const pokemonEncontrado = buscarId(id);
+      const pokemonImpreso = crearPlantillaModal(
+        pokemonEncontrado.name.charAt(0).toUpperCase() + pokemonEncontrado.name.slice(1),
+        pokemonEncontrado.num,
+        pokemonEncontrado.img,
+        pokemonEncontrado.about,
+        pokemonEncontrado.type.join(',  '),
+        pokemonEncontrado.resistant.join(',  '),
+        pokemonEncontrado.weaknesses.join(',  '),
+      );
+      imprimirEnModal(pokemonImpreso);
+      modal.style.display = 'block';
     });
+  });
+};
 
-    var sel = document.getElementById("p1_");
-    var text1 = sel.options[sel.selectedIndex].text;
+// Creando la plantilla de los pokemones en la Pokedex
+const crearPlantillaPokemon = (name, image, num) => `
+        <button class="name-pokemon" data-pokemon="${num}"> 
+            <section class="img-pokemon">
+            <img id="imagen-cada-poke" src="${image}" alt="${name}">
+            </section>
+            <h2>#${num}</h2>
+            <h1>${name}</h1>
+        </button>
+    `;
+const imprimirEnPantalla = (pokemon) => {
+  containerPokedex.insertAdjacentHTML('beforeend', pokemon);
+};
 
-    var sel2 = document.getElementById("p2_");
-    var text2 = sel2.options[sel2.selectedIndex].text;
+// Imprimiendo en pantalla la plantilla general
+const pintarEnPantalla = (pokemones) => {
+  containerPokedex.innerHTML = '';
+  pokemones.forEach((pokemonAtrib) => {
+    const pokemonName = pokemonAtrib.name.charAt(0).toUpperCase() + pokemonAtrib.name.slice(1);
+    const pokemonNum = pokemonAtrib.num;
+    const pokemonImg = pokemonAtrib.img;
+    const pokemon = crearPlantillaPokemon(pokemonName, pokemonImg, pokemonNum);
+    imprimirEnPantalla(pokemon);
+  });
+};
 
-    document.getElementById("n_t").innerHTML =
-      "N° de tarjeta " + numero_tarjeta_codificado;
-    document.getElementById("n_t1").innerHTML = "Tipo de habitación " + text1;
-    document.getElementById("n_t2").innerHTML = "Horario " + text2;
-    document.getElementById("n_t3").innerHTML =
-      "Check-in " + document.getElementById("start").value;
-  } else {
-    alert("Su Tarjeta no es Valida ");
+// Asignandole un evento al selector por orden
+// Asignando en variables el valor de las option e input elegidos
+// Imprimiendo en pantalla la plantilla ordenada
+selectorPorOrden.addEventListener('change', () => {
+  const orden = selectorPorOrden.value;
+  const tipoSeleccionado = selectorTipoPokemon.value;
+  const nombreBuscado = inputNombrePokemon.value;
+  containerPokedex.innerHTML = '';
+  const ordenados = filtroEnConjunto(orden, tipoSeleccionado, nombreBuscado);
+  pintarEnPantalla(ordenados);
+  asignarEvento(); // Permite que se abra el modal despues de aplicados los filtros
+});
+
+// Plantilla que crea los tipos de pokemon en el select de html
+const crearPlantillaPokemonTipo = type => `
+        <select>
+          <option value="${type}">${type}</option>
+        </select>
+    `;
+
+const imprimirEnSelector = (select) => {
+  selectorTipoPokemon.insertAdjacentHTML('beforeend', select);
+};
+
+// Pintando en el selector los tipos de pokemon
+const pintarEnSelector = (type) => {
+  type.forEach((tipoPokemones) => {
+    const pokemonType = tipoPokemones;
+    const tipo = crearPlantillaPokemonTipo(pokemonType);
+    imprimirEnSelector(tipo);
+  });
+};
+
+// Asignandole un evento al selector por tipo
+// Asignando en variables el valor de las option e input elegidos
+// Pintando en pantalla solo los pokemones filtrados por tipo.
+selectorTipoPokemon.addEventListener('change', () => {
+  const orden = selectorPorOrden.value;
+  const tipoSeleccionado = selectorTipoPokemon.value;
+  const nombreBuscado = inputNombrePokemon.value;
+  const pokemonesFiltradosPorTipo = filtroEnConjunto(orden, tipoSeleccionado, nombreBuscado);
+  pintarEnPantalla(pokemonesFiltradosPorTipo);
+  asignarEvento(); // Permite que se abra el modal despues de aplicados los filtros
+});
+
+// Filtrar por nombre ingresado en input
+inputNombrePokemon.addEventListener('input', () => {
+  const orden = selectorPorOrden.value;
+  const tipoSeleccionado = selectorTipoPokemon.value;
+  const nombreBuscado = inputNombrePokemon.value;
+  const pokemonesFiltrados = filtroEnConjunto(orden, tipoSeleccionado, nombreBuscado);
+  pintarEnPantalla(pokemonesFiltrados);
+  asignarEvento(); // Permite que se abra el modal despues de aplicados los filtros
+});
+
+// Al presionar cualquier lugar fuera del modal, se cierra
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
   }
 });
 
-// funcion que devuelve a la primera pantalla
-let backAgain = document.getElementById("back-again");
-backAgain.addEventListener("click", () => {
-  let container = document.getElementById("container");
-  let container2 = document.getElementById("container2");
-  let container3 = document.getElementById("container3");
-  container.style.display = "block";
-  container2.style.display = "none";
-  container3.style.display = "none";
-});
+// recorremos el arreglo de todos los pokemones
+pintarEnPantalla(data.pokemon);
 
-//console.log(validator);
+// asignar evento a cada pokemon de la pantalla
+asignarEvento();
+
+// Mostrar en pantala los tipos seleccionados.
+pintarEnSelector(obtenerTipos());

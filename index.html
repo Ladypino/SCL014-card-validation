@@ -1,72 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casa del Lobo</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="final">
-        <div class="logo">
-        <img src="img/lobo.png"/>
-          <h1>--- LA CASA DEL LOBO ---</h1>
-          <p>Hotel & Resort</p>
-        </div>
-      </div>
-    </header>
-    <main>
-      <!-- Primera pantalla del menú -->
-      <div id="container">
-        <h2>Bienvenido Porfavor seleccione su Suite</h2>
-        <label for="room">Tipo de habitación</label>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-        <select name="room" id="p1_">
-          <option value="value1">1 Cama Matrimonial</option>
-          <option value="value2">2 Camas Individuales</option>
-        </select>
-
-        <br />
-        <label for="schedule">Horario</label>
-        <select name="schedule" id="p2_">
-          <option value="value3">12:00 PM</option>
-          <option value="value4">15:00 PM</option>
-        </select>
-
-        <br />
-        <label for="date">Check-in</label>
-        <input type="date" id="start" name="date-choosen" />
-        <br />
-        <input type="button" id="btn" value="Siguiente" />
-      </div>
-    </main>
-    <!-- Segunda pantalla el validador -->
-    <div id="container2">
-      <h2>Es necesario que valide su tarjeta para continuar</h2>
-
-      <input type="password" placeholder="Digite números" id="NumeroTarj" />
-      <button type="button" class="btn btn-primary" id="mostrarTarjeta">
-        Mostrar
-      </button>
-      <button type="button" id="myFunction">Validar</button>
-
-      <br />
-      <input type="button" value="Continuar" id="back-btn" />
+</div>
+<div id="modal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" id="close">&times;</span>
+    <div id="pokemon-container-modal">
     </div>
-    <!-- Tercera pantalla  -->
-    <div id="container3">
-      <h3>Gracias por su preferencia</h3>
-      <h4>Su reserva a sido Validada</h4>
+  </div>
+</div> 
+<
 
-      <h4 id="n_t"></h4>
-      <h4 id="n_t1"></h4>
-      <h4 id="n_t2"></h4>
-      <h4 id="n_t3"></h4>
-
-      <input type="button" value="Finalizar" id="back-again" />
-    </div>
-    <footer>© Todos los derechos reservados 2020</footer>
-    <script src="index.js" type="module"></script>
-  </body>
+</body>
+<script src="index.js" type="module"> </script>
 </html>
