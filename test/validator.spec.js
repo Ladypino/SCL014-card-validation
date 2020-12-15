@@ -11,6 +11,7 @@ describe('validator', () => {
     });
 
     test('debería retornar true para "4083952015263"', () => {
+
       expect(validator.isValid('4083952015263')).toBe(true);
     });
 
@@ -25,6 +26,7 @@ describe('validator', () => {
       expect(typeof validator.maskify).toBe('function');
     });
 // caso str de 16 números
+
     test('Debería retornar "########5263" para "4083952015263"', () => {
       expect(validator.maskify('4083952015263')).toEqual('########5263');
     });    
@@ -32,6 +34,7 @@ describe('validator', () => {
     test.skip('Debería retornar "#######5616" para "64607935616"', () => {
       expect(validator.maskify('########5616')).toEqual('64607935616');
     });
+
 
 // caso str de cuatro números
     test('Debería retornar "2045" para "2045"', () => {

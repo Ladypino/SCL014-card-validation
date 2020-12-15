@@ -1,7 +1,7 @@
 /* Girl power */
 body{
   /* overflow-y: hidden; */
-  background:  url(img/img4.jpg);
+  background:  url(/img/img4.jpg.jpeg);
   background-color: black;
 } 
 
@@ -88,6 +88,7 @@ h4{
 
 /* contener segunda pantalla */
 #container2{  
+  display: none;
   width: 70%;
   background: rgb(19, 19, 18);
   margin-left: 10%;
@@ -95,11 +96,11 @@ h4{
   padding: 2% 5%;
   border-radius: 10px;
   opacity: 0.7;
-  display:none;
 }
 
 /* contenedor tercera pantalla */
 #container3{
+  display: none;
   justify-content: center;
   flex-direction: column;
   width:  70%;
@@ -109,7 +110,6 @@ h4{
   padding: 2% 5%;
   border-radius: 10px;
   opacity: 0.8; 
-  display:none;
 }
 
 /* estilo para el boton
@@ -139,8 +139,8 @@ select{
   font-size: 23px;
 }
 
-      
 
+/*solo afecta al calendario y el password*/
 input, textarea{
   margin-bottom: 12px;
   width: 20%;
@@ -157,14 +157,14 @@ button[type="button"]{
   border-radius: 3px ;
   margin-left: 1em;
   padding: 0em 1em;
-  
 }
 
 input[type="password"]{
   padding: 0em 1em;
   display: inline-block;
-  
+  margin-left: 30%;
 }
+
 
 
 /* animacion para el boton de siguiente */
@@ -176,6 +176,7 @@ button[type="button"]:hover{
  background: grey ;
 }
 
+
 /* OJO: las opciones desplazables están como select(no es input), en cambio la opción de fecha está como date y es un input */
 .final{
   background-color:rgb(018,018,018);
@@ -183,9 +184,10 @@ button[type="button"]:hover{
   border-radius: 10px;
 }
 
+
 /* animacion del cursos para los input */
 select:hover,input[type="button"]:hover, input[type="date"]:hover, button[type="button"]:hover{
   cursor: pointer;
 }
 
- 
+
